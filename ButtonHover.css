@@ -1,0 +1,41 @@
+body{
+    background: #111;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container{
+    text-align: center;
+    margin: 20% auto;
+}
+.button{
+    display: inline-block;
+    width: 250px;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid #00fffb;
+    position: relative;
+    color: #ffff;
+    margin: 10px 5px 0 5px;
+}
+.button::before{
+    content: " ";
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: -97px;
+    background: #4cfcf9f1;
+    border-radius: 100%;
+    z-index: -10;
+    transform: scale(0);
+    transition: 0.4s ease-in-out;
+}
+.button:hover{
+    color: #011e2b;
+}
+.button:hover::before{
+    transform: scale(1.5);
+}
